@@ -821,7 +821,7 @@ static int odroidISR(int pin, int mode) {
 		return -1;
 	}
 
-	if (odModel == OD_MODEL_ODROIDC || odModel == OD_MODEL_ODROIDC2) {
+	if (odModel == OD_MODEL_ODROIDC) {
 		gpio_value_name = "/sys/class/aml_gpio/gpio%d/value";
 		gpio_export_name = "/sys/class/aml_gpio/export";
 		gpio_direction_name = "/sys/class/aml_gpio/gpio%d/direction";
