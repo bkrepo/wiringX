@@ -821,13 +821,6 @@ static int odroidISR(int pin, int mode) {
 		return -1;
 	}
 
-	if (odModel == OD_MODEL_ODROIDC) {
-		gpio_value_name = "/sys/class/aml_gpio/gpio%d/value";
-		gpio_export_name = "/sys/class/aml_gpio/export";
-		gpio_direction_name = "/sys/class/aml_gpio/gpio%d/direction";
-		gpio_edge_name = "/sys/class/aml_gpio/gpio%d/edge";
-	}
-
 	sprintf(path, gpio_value_name, pinToGpio[pin]);
 	fd = open(path, O_RDWR);
 
